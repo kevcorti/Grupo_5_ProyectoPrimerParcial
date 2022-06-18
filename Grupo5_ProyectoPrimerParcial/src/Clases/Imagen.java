@@ -13,7 +13,7 @@ import java.util.Date;
  * @author Grupo 5: Kevin Castro,Richard Perez
  */
 public class Imagen <E>{
-    private String nImagen;
+    private String url;
     private String descripcion;
     private String lugar;
     private Date fecha;
@@ -21,7 +21,7 @@ public class Imagen <E>{
     private CircularDoubleLinkedList personas;
 
     public Imagen(String nImagen, String descripcion, String lugar, Date fecha, String album, CircularDoubleLinkedList personas) {
-        this.nImagen = nImagen;
+        this.url = nImagen;
         this.descripcion = descripcion;
         this.lugar = lugar;
         this.fecha = fecha;
@@ -31,7 +31,7 @@ public class Imagen <E>{
     
 
     public String getnImagen() {
-        return nImagen;
+        return url;
     }
 
     public String getDescripcion() {
@@ -55,7 +55,7 @@ public class Imagen <E>{
     }
 
     public void setnImagen(String nImagen) {
-        this.nImagen = nImagen;
+        this.url = nImagen;
     }
 
     public void setDescripcion(String descripcion) {
