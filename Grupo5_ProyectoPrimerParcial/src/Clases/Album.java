@@ -7,7 +7,7 @@ package Clases;
 import grupo5.util.*;
 /**
  *
- * @author Ipmsar
+ * @author Grupo 5: Kevin Castro,Richard Perez
  * @param <E>
  */
 public class Album <E> {

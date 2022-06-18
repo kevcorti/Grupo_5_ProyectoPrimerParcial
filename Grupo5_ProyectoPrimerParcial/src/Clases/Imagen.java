@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author Ipmsar
+ * @author Grupo 5: Kevin Castro,Richard Perez
  */
 public class Imagen <E>{
     private String nImagen;

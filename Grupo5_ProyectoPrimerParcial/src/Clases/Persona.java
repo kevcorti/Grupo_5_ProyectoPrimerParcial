@@ -7,7 +7,7 @@ package Clases;
 
 /**
  *
- * @author Ipmsar
+ * @author Grupo 5: Kevin Castro,Richard Perez
  */
 public class Persona {
     private String nombre;
