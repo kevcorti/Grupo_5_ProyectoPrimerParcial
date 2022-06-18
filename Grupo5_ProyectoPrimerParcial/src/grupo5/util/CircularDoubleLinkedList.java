@@ -5,22 +5,52 @@
  */
 package grupo5.util;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Grupo 5: Kevin Castro,Richard Perez
  * @param <E>
  */
-public class DoubleLinkedList <E> implements List <E>{
+public class CircularDoubleLinkedList <E> implements List<E>,Iterable<E>{
+    private Node<E> last;
+    private int tam;
+
+    @Override
+    public Iterator<E> iterator() {
+        Iterator<E> it = new Iterator<E>(){
+            Node<E> n = last.siguiente;
+            @Override
+            public boolean hasNext() {
+                return n!=null;
+            }
+
+            @Override
+            public E next() {
+                E temp = n.contenido;
+                n = n.siguiente;
+                return temp;
+            }
+            
+        };
+        return it;
+    }
     
-    private static class Node <E>{
+    private class Node<E>{
         private E contenido;
-        private Node <E> next;
-        private Node <E> last;
+        private Node<E> siguiente;
+        private Node<E> anterior;
+        
         public Node(E e){
-            contenido=e;
-            next=null;
-            last=null;
+            this.contenido=contenido;
+            this.siguiente=null;
+            this.anterior=null;
         }
+    }
+    
+    public CircularDoubleLinkedList(){
+        last=null;
+        tam=0;
     }
 
     @Override
@@ -92,5 +122,6 @@ public class DoubleLinkedList <E> implements List <E>{
     public boolean remove(int index) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     
 }
